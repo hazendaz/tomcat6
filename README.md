@@ -1,7 +1,7 @@
-Tomcat 6 Bundle
-===============
+Tomcat 6 Bundle (Reached End of Life)
+=====================================
 
-This project takes tomcat 6.x.x zip and expands on it to provide the following.
+This project takes tomcat 6.0.53 zip and expands on it to provide the following.
 
 - Tomcat-slf4j-logback integration
 - Logback Access integration
