@@ -27,7 +27,7 @@
 
     <fileSets>
 
-        <!-- Tomcat Core -->
+        <!-- Tomcat Core for libraries (jars) -->
         <fileSet>
             <directory>${project.build.directory}/${project.environment}-${tomcat.version}/bin</directory>
             <outputDirectory>bin</outputDirectory>
