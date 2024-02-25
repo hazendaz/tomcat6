@@ -203,14 +203,14 @@
         <!-- Grap tomcat binaries that require no renaming -->
         <dependencySet>
             <includes>
-                <include>*:tomcat-api</include>
-                <include>*:tomcat-coyote</include>
-                <include>*:tomcat-dbcp</include>
-                <include>*:tomcat-jdbc</include>
-                <include>*:tomcat-jni</include>
-                <include>*:tomcat-util</include>
-                <include>*:tomcat-util-scan</include>
-                <include>*:tomcat-websocket</include>
+                <include>*:tomcat-api</include> <!-- does not exist -->
+                <include>*:tomcat-coyote</include> <!-- needs rename -->
+                <include>*:tomcat-dbcp</include> <!-- needs rename -->
+                <include>*:tomcat-jdbc</include> <!-- does not exist -->
+                <include>*:tomcat-jni</include> <!-- does not exist -->
+                <include>*:tomcat-util</include> <!-- does not exist -->
+                <include>*:tomcat-util-scan</include> <!-- does not exist -->
+                <include>*:tomcat-websocket</include> <!-- does not exist -->
             </includes>
             <outputFileNameMapping>${artifact.name}.${artifact.extension}</outputFileNameMapping>
             <outputDirectory>lib</outputDirectory>
