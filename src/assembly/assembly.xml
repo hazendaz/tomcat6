@@ -180,6 +180,16 @@
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
 
+        <!-- Grap Endorsed Dependencies -->
+        <dependencySet>
+            <includes>
+                <include>*:webservices-api</include>
+            </includes>
+            <outputDirectory>endorsed</outputDirectory>
+            <unpack>false</unpack>
+            <useProjectArtifact>false</useProjectArtifact>
+        </dependencySet>
+
         <!-- Grap Lib Dependencies -->
         <dependencySet>
             <includes>
@@ -199,6 +209,7 @@
                 <include>*:jakarta.websocket-api</include>
                 <include>*:logback-access</include>
                 <include>*:logback-core</include>
+                <include>*:webservices-rt</include>
             </includes>
             <outputDirectory>lib</outputDirectory>
             <unpack>false</unpack>
