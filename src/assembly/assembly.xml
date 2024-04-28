@@ -226,7 +226,6 @@
                 <include>*:tomcat-jni</include> <!-- does not exist -->
                 <include>*:tomcat-util</include> <!-- does not exist -->
                 <include>*:tomcat-util-scan</include> <!-- does not exist -->
-                <include>*:tomcat-websocket</include> <!-- does not exist -->
             </includes>
             <outputFileNameMapping>${artifact.name}.${artifact.extension}</outputFileNameMapping>
             <outputDirectory>lib</outputDirectory>
