@@ -206,7 +206,7 @@
                 <include>*:jakarta.persistence-api</include>
                 <include>*:jakarta.resource-api</include>
                 <include>*:jakarta.transaction-api</include>
-                <include>*:jakarta.websocket-api</include>
+                <include>*:jmxremote_optional-repackaged</include>
                 <include>*:logback-access</include>
                 <include>*:logback-core</include>
                 <include>*:webservices-rt</include>
@@ -219,13 +219,13 @@
         <!-- Grap tomcat binaries that require no renaming -->
         <dependencySet>
             <includes>
-                <include>*:tomcat-api</include> <!-- does not exist -->
-                <include>*:tomcat-coyote</include> <!-- needs rename -->
-                <include>*:tomcat-dbcp</include> <!-- needs rename -->
-                <include>*:tomcat-jdbc</include> <!-- does not exist -->
-                <include>*:tomcat-jni</include> <!-- does not exist -->
-                <include>*:tomcat-util</include> <!-- does not exist -->
-                <include>*:tomcat-util-scan</include> <!-- does not exist -->
+                <include>*:catalina</include>
+                <include>*:catalina-ant</include>
+                <include>*:catalina-ha</include>
+                <include>*:jasper</include>
+                <include>*:jasper-el</include>
+                <include>*:jsp-api</include>
+                <include>*:servlet-api</include>
             </includes>
             <outputFileNameMapping>${artifact.name}.${artifact.extension}</outputFileNameMapping>
             <outputDirectory>lib</outputDirectory>
@@ -234,16 +234,30 @@
         </dependencySet>
 
         <!-- Grap and rename remaining tomcat binaries to match defaults -->
-        <!-- todo -->
-
-        <!-- Grab Wars -->
         <dependencySet>
             <includes>
-                <include>*:war</include>
+                <include>*:tribes</include>
             </includes>
-            <fileMode>06444</fileMode>
-            <outputFileNameMapping>psi-probe.${artifact.extension}</outputFileNameMapping>
-            <outputDirectory>webapps</outputDirectory>
+            <outputFileNameMapping>catalina-tribes.${artifact.extension}</outputFileNameMapping>
+            <outputDirectory>lib</outputDirectory>
+            <unpack>false</unpack>
+            <useProjectArtifact>false</useProjectArtifact>
+        </dependencySet>
+        <dependencySet>
+            <includes>
+                <include>*:coyote</include>
+            </includes>
+            <outputFileNameMapping>tomcat-coyote.${artifact.extension}</outputFileNameMapping>
+            <outputDirectory>lib</outputDirectory>
+            <unpack>false</unpack>
+            <useProjectArtifact>false</useProjectArtifact>
+        </dependencySet>
+        <dependencySet>
+            <includes>
+                <include>*:dbcp</include>
+            </includes>
+            <outputFileNameMapping>tomcat-dbcp.${artifact.extension}</outputFileNameMapping>
+            <outputDirectory>lib</outputDirectory>
             <unpack>false</unpack>
             <useProjectArtifact>false</useProjectArtifact>
         </dependencySet>
